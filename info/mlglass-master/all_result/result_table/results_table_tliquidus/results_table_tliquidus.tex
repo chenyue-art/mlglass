@@ -1,0 +1,25 @@
+\documentclass{article}
+\usepackage{booktabs} % 用于更好的表格线条
+\usepackage{multirow} % 用于多行合并
+\usepackage{graphicx} % 用于调整表格大小
+\usepackage{siunitx}  % 用于数字对齐
+
+\begin{document}
+
+\begin{table}[!htbp]
+	\setlength{\tabcolsep}{3pt}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{lrrrrrrrrrrrr}
+		\toprule
+		\multirow{2}{*}{Metric} & & \multicolumn{2}{c}{Cart} & & \multicolumn{2}{c}{k-NN} & & \multicolumn{2}{c}{RF}\\
+		 \cline{3-4} \cline{6-7} \cline{9-10}
+		  & & Default & Tuning & & Default & Tuning & & Default & Tuning\\
+		\midrule
+		RD & & $1.65 \pm 0.07$ & $7.3 \pm 2.3$ & & $1.35 \pm 0.06$ & $1.22 \pm 0.06$ & & $1.18 \pm 0.07$ & $1.24 \pm 0.03$\\
+		$R^2$ & & $0.89 \pm 0.02$ & $0.2 \pm 0.4$ & & $0.93 \pm 0.01$ & $0.93 \pm 0.02$ & & $0.94 \pm 0.02$ & $0.94 \pm 0.01$\\
+		RMSE & & $0.064 \pm 0.005$ & $0.16 \pm 0.05$ & & $0.051 \pm 0.004$ & $0.050 \pm 0.005$ & & $0.047 \pm 0.006$ & $0.046 \pm 0.006$\\
+		RRMSE & & $0.34 \pm 0.03$ & $0.9 \pm 0.2$ & & $0.27 \pm 0.03$ & $0.27 \pm 0.03$ & & $0.25 \pm 0.04$ & $0.24 \pm 0.03$\\
+		\bottomrule
+	\end{tabular}}
+\end{table}
+\end{document}
